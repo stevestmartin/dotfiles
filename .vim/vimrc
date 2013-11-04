@@ -9,3 +9,11 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundleCheck
+
+" Plugins
+NeoBundle 'chriskempson/base16-vim'
+colorscheme base16-default
+set background=dark
+
+syntax on
+filetype plugin indent on
