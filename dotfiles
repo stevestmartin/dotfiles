@@ -6,23 +6,18 @@ require 'bundler/setup'
 require "thor"
 
 class DotfilesCLI < Thor
+  include Thor::Actions
+
   desc "install", "Creates symlinks in home directory"
-  option :cleanup, type: :boolean, default: false, aliases: %w(c)
-
   def install
-    cleanup if options[:cleanup]
-
-    puts "installing"
+    # install zsh / zprezto
+    create_link "~/.zprezto", File.join(__dir__, "vendor/deps/prezto")
+    Dir['.z*'].each {|p| create_link "~/#{p}", File.join(__dir__, p) }
   end
 
   desc "uninstall", "Removes symlinks in home directory"
   def uninstall
-    puts "uninstalling"
-  end
-
-  desc "cleanup", "Cleanup existing dotfiles in home directory"
-  def cleanup
-    puts "cleaning up"
+    say "uninstalling"
   end
 end
 
