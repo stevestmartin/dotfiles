@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+# vim: set filetype=ruby
+
+require 'rubygems'
+require 'bundler/setup'
+require "thor"
+
+class DotfilesCLI < Thor
+  desc "install", "Creates symlinks in home directory"
+  option :cleanup, type: :boolean, default: false, aliases: %w(c)
+
+  def install
+    cleanup if options[:cleanup]
+
+    puts "installing"
+  end
+
+  desc "uninstall", "Removes symlinks in home directory"
+  def uninstall
+    puts "uninstalling"
+  end
+
+  desc "cleanup", "Cleanup existing dotfiles in home directory"
+  def cleanup
+    puts "cleaning up"
+  end
+end
+
+DotfilesCLI.start(ARGV)
