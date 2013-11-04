@@ -13,6 +13,9 @@ class DotfilesCLI < Thor
     # install zsh / zprezto
     create_link "~/.zprezto", File.join(__dir__, "vendor/deps/prezto")
     Dir['.z*'].each {|p| create_link "~/#{p}", File.join(__dir__, p) }
+
+    # install vim
+    create_link "~/.vim", File.join(__dir__, ".vim")
   end
 
   desc "uninstall", "Removes symlinks in home directory"
