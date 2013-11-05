@@ -1,4 +1,7 @@
+.bundle/
+.idea/
+.vagrant/
 .vim/bundle/
 .vim/.cache/
-tmp/
 vendor/bundle/
+tmp/

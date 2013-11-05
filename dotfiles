@@ -16,6 +16,7 @@ class DotfilesCLI < Thor
 
     # install vim
     create_link "~/.vim", File.join(__dir__, ".vim")
+    create_link "~/.agignore", File.join(__dir__, ".agignore")
   end
 
   desc "uninstall", "Removes symlinks in home directory"
