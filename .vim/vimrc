@@ -27,6 +27,7 @@ NeoBundle 'myusuf3/numbers.vim' 		" better line numbers
 NeoBundle 'terryma/vim-multiple-cursors'        " Sublime style multiple selections
 NeoBundle 'tpope/vim-dispatch' 			" build tasks FTW
 NeoBundle 'Valloric/YouCompleteMe', {'build': {'unix': './install.sh --clang-completer --system-libclang', 'mac': './install.sh --clang-completer'}}
+NeoBundle 'SirVer/ultisnips' 			" Snippets
 
 " Todo autoload only on osx?
 NeoBundle 'troydm/pb.vim' 			" OSX pastebuffer interaction
