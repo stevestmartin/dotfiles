@@ -1,7 +1,22 @@
+# directories
 .bundle/
 .idea/
+.rspec/
 .vagrant/
 .vim/bundle/
 .vim/.cache/
-vendor/bundle/
+images/
+log/
+logs/
 tmp/
+vendor/
+
+" files
+*.bak
+*.gemtags*
+*.log*
+*.old
+*.pdf*
+*.sql*
+*.tags*
+*.tmp*
