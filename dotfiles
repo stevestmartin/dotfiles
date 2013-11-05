@@ -17,6 +17,7 @@ class DotfilesCLI < Thor
 	# TODO: install homebrew (if it doesnt exist)
 	# TODO: ask homebrew which of these it has (install the oens that arent there)
 	%w(cscope ctags git git-extras lua luajit python rbenv rbenv-binstubs rbenv-gem-rehash the_silver_searcher tmux).each {|pkg| `brew install #{pkg}`}
+	['macvim --with-cscope --with-lua --with-luajit --with-python --override-system-vim'].each {|pkg| `brew install #{pkg}`}
       end
     end
 
