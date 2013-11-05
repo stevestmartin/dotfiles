@@ -16,10 +16,21 @@ NeoBundle 'chriskempson/base16-vim' 		" colorscheme
 NeoBundle 'rking/ag.vim' 			" search
 NeoBundle 'bling/vim-airline' 			" statusline
 NeoBundle 'tpope/vim-fugitive'			" git
-NeoBundle 'mattn/emmet-vim'			" html completion
+NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Shougo/unite.vim' 			" completion window
-NeoBundle 'Shougo/unite-outline'
 NeoBundle 'scrooloose/syntastic' 		" syntax check on buffer save
+
+" html completion
+NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','css','sass','scss','less']}}
+
+NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffee']}}
+NeoBundleLazy 'leshill/vim-json', {'autoload':{'filetypes':['javascript','json']}}
+NeoBundleLazy 'jnwhiteh/vim-golang', {'autoload':{'filetypes':['go']}}
+NeoBundleLazy 'nsf/gocode', {'autoload': {'filetypes':['go']}, 'rtp': 'vim'}
+NeoBundleLazy 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':'7.3.885'}
+NeoBundleLazy 'Shougo/unite-outline', {'autoload':{'unite_sources':'outline'}}
+NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}}
+NeoBundleLazy 'tpope/vim-markdown', {'autoload':{'filetypes':['markdown']}}
 NeoBundleCheck
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
