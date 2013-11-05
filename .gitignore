@@ -1,4 +1,9 @@
-.vim/bundle/
-.vim/.cache/
+# global ignores
+*.swo
+*.swp
 tmp/
 vendor/bundle/
+
+# dotfiles repo ignore
+.vim/bundle/
+.vim/.cache/

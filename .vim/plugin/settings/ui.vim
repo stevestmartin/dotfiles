@@ -1,4 +1,4 @@
-silent! colorscheme base16-default
+colorscheme base16-default
 set background=dark
 set cmdheight=2 		" Height of command bar
 set shortmess=a                 " Show shorter messages
@@ -36,10 +36,6 @@ set helpheight=30 		" Set window height when opening vim help windows
 set linebreak  			" Wrap lines longer than window
 set showbreak=↪\ \ 		" string to put before wrapped screen lines
 set display+=lastline 		" show last line even if it doesnt fit in the window
-
-if exists('+colorcolumn')
-  set colorcolumn=80 		" display line in column 80 to show where to line break
-end
 
 " Define characters to show when you show formatting
 " stolen from https://github.com/tpope/vim-sensible

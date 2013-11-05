@@ -27,12 +27,6 @@ nnoremap <leader>fn :Unite -toggle file/new<cr>
 " Overwrite settings.
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()
-  " remove line numbers
-  autocmd FocusGained * :set nonumber norelativenumber
-  autocmd FocusLost   * :set nonumber norelativenumber
-  autocmd InsertEnter * :set nonumber norelativenumber
-  autocmd InsertLeave * :set nonumber norelativenumber
-
   " ctrl+s to open in split
   imap <silent><buffer><expr> <C-s>	unite#do_action('split')
 
