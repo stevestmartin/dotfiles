@@ -1,6 +1,6 @@
 colorscheme base16-default
 set background=dark
-set cmdheight=2 		" Height of command bar
+set cmdheight=1 		" Height of command bar
 set shortmess=a                 " Show shorter messages
 set hidden			" Handle multiple buffers better
 set ruler 			" Show the cursor position all the time
@@ -36,6 +36,7 @@ set helpheight=30 		" Set window height when opening vim help windows
 set linebreak  			" Wrap lines longer than window
 set showbreak=↪\ \ 		" string to put before wrapped screen lines
 set display+=lastline 		" show last line even if it doesnt fit in the window
+set number 			" show line numbers
 
 " Define characters to show when you show formatting
 " stolen from https://github.com/tpope/vim-sensible
@@ -45,9 +46,3 @@ if &listchars ==# 'eol:$'
     let &listchars = "tab:\u21e5,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
   endif
 endif
-
-" Intelligently switch between realtive and absolute line numbers
-autocmd FocusLost * :set number
-autocmd FocusGained * :set relativenumber
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
