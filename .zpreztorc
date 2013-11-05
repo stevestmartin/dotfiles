@@ -25,14 +25,23 @@ zstyle ':prezto:*:*' color 'yes'
 # The order matters.
 zstyle ':prezto:load' pmodule \
   'environment' \
-  'completion' \
-  'directory' \
-  'prompt' \
-  'utility' \
-  'git' \
+  'terminal' \
+  'editor' \
   'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'prompt' \
+  'git' \
   'ruby' \
-  # 'terminal' \
+
+#
+# Editor
+#
+
+# Set the key mapping style to 'emacs' or 'vi'.
+zstyle ':prezto:module:editor' key-bindings 'vim'
 
 #
 # Git
@@ -49,3 +58,10 @@ zstyle ':prezto:module:git:status:ignore' submodules 'untracked'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'sorin'
+
+#
+# Terminal
+#
+
+# Auto set the tab and window titles.
+zstyle ':prezto:module:terminal' auto-title 'yes'
