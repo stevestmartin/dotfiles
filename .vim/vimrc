@@ -19,6 +19,10 @@ NeoBundle 'tpope/vim-fugitive'			" git
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Shougo/unite.vim' 			" completion window
 NeoBundle 'scrooloose/syntastic' 		" syntax check on buffer save
+NeoBundle 'Lokaltog/TagHighlight' 		" tag highlighting
+NeoBundle 'matze/vim-move' 			" line-wise up/down shift selected blocks
+NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'chip/vim-fat-finger' 		" spelling corrections
 
 " html completion
 NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','css','sass','scss','less']}}
@@ -29,6 +33,7 @@ NeoBundleLazy 'jnwhiteh/vim-golang', {'autoload':{'filetypes':['go']}}
 NeoBundleLazy 'nsf/gocode', {'autoload': {'filetypes':['go']}, 'rtp': 'vim'}
 NeoBundleLazy 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':'7.3.885'}
 NeoBundleLazy 'Shougo/unite-outline', {'autoload':{'unite_sources':'outline'}}
+NeoBundleLazy 'tsukkee/unite-tag', {'autoload':{'unite_sources':['tag','tag/file']}}
 NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}}
 NeoBundleLazy 'tpope/vim-markdown', {'autoload':{'filetypes':['markdown']}}
 NeoBundleCheck
