@@ -35,6 +35,8 @@ NeoBundle 'surround.vim'
 NeoBundle 'Chiel92/vim-autoformat' 		          " Autoformat code
 NeoBundle 'terryma/vim-smooth-scroll'
 NeoBundle 'ethanvandenberg22/unite-ultisnips'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'tpope/vim-rbenv'
 
 " html completion
 NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','css','eruby','less', 'sass','scss']}}
@@ -50,7 +52,6 @@ NeoBundleLazy 'tsukkee/unite-tag', {'autoload':{'unite_sources':['tag','tag/file
 NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}}
 NeoBundleLazy 'tpope/vim-markdown', {'autoload':{'filetypes':['markdown']}}
 NeoBundleLazy 'tpope/vim-rails', {'autoload':{'filetypes':['eruby', 'ruby']}}
-NeoBundleLazy 'tpope/vim-rbenv', {'autoload':{'filetypes':['eruby', 'ruby']}}
 NeoBundleLazy 'KurtPreston/vim-autoformat-rails', {'autoload':{'filetypes':['eruby', 'ruby']}}
 NeoBundleLazy 'pangloss/vim-javascript', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'maksimr/vim-jsbeautify', {'autoload':{'filetypes':['javascript']}}
