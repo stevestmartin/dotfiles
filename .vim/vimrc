@@ -38,6 +38,7 @@ NeoBundle 'ethanvandenberg22/unite-ultisnips'
 NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-rbenv'
 NeoBundle 'ervandew/supertab'
+NeoBundle 'marijnh/tern_for_vim', { 'build': { 'mac': 'npm install', 'unix': 'npm install' } }
 
 " html completion
 NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','css','eruby','less', 'sass','scss']}}
