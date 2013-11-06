@@ -31,20 +31,13 @@ NeoBundle 'Valloric/YouCompleteMe', {'build': {'unix': './install.sh --clang-com
 NeoBundle 'SirVer/ultisnips' 			              " Snippets
 NeoBundle 'commentary.vim'
 NeoBundle 'surround.vim'
-
-" TODO: lazy load?
 NeoBundle 'Chiel92/vim-autoformat' 		          " Autoformat code
-NeoBundle 'KurtPreston/vim-autoformat-rails' 	
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-rbenv'
-NeoBundle 'Haml'
 
 " TODO lazy load for osx only?
-NeoBundle 'troydm/pb.vim' 			                " OSX pastebuffer interaction
-" NeoBundle 'Dinduks/vim-holylight' 		          " set dark/light background based on OSX light sensor
 
 " html completion
 NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','css','eruby','less', 'sass','scss']}}
+NeoBundleLazy 'Haml', {'autoload':{'filetypes':['eruby', 'sass','scss']}}
 NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffee']}}
 NeoBundleLazy 'leshill/vim-json', {'autoload':{'filetypes':['javascript','json']}}
 NeoBundleLazy 'jnwhiteh/vim-golang', {'autoload':{'filetypes':['go']}}
@@ -53,7 +46,16 @@ NeoBundleLazy 'Shougo/unite-outline', {'autoload':{'unite_sources':'outline'}}
 NeoBundleLazy 'tsukkee/unite-tag', {'autoload':{'unite_sources':['tag','tag/file']}}
 NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}}
 NeoBundleLazy 'tpope/vim-markdown', {'autoload':{'filetypes':['markdown']}}
-NeoBundleLazy 'tpope/vim-markdown', {'autoload':{'filetypes':['markdown']}}
+NeoBundleLazy 'tpope/vim-rails', {'autoload':{'filetypes':['eruby', 'ruby']}}
+NeoBundleLazy 'tpope/vim-rbenv', {'autoload':{'filetypes':['eruby', 'ruby']}}
+NeoBundleLazy 'KurtPreston/vim-autoformat-rails', {'autoload':{'filetypes':['eruby', 'ruby']}}
+
+" OSX pastebuffer interaction
+NeoBundleLazy 'troydm/pb.vim', {'autoload':{'functions':["has('mac')"]}} 			                
+
+" set dark/light background based on OSX light sensor
+" NeoBundleLazy 'Dinduks/vim-holylight', {'autoload':{'functions':["has('mac')"]}} 		          
+ 	
 NeoBundleCheck
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
