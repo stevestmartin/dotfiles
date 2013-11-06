@@ -7,6 +7,7 @@ set ffs=unix,mac,dos
 set directory=~/.vim/.cache/swap
 set noswapfile
 set showfulltag
+set tags=./git/tags,./tags,tags;/
 set modeline
 set modelines=5
 
