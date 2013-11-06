@@ -2,6 +2,7 @@
 " Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme base16-default
+set background=dark
 
 set cmdheight=1 		" Height of command bar
 set shortmess=a                 " Show shorter messages

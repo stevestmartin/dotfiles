@@ -12,35 +12,35 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc', {'build' : {'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak'}}
 
-NeoBundle 'chriskempson/base16-vim' 		" colorscheme
-NeoBundle 'rking/ag.vim' 			" search
-NeoBundle 'bling/vim-airline' 			" statusline
-NeoBundle 'tpope/vim-fugitive'			" git
+NeoBundle 'chriskempson/base16-vim' 		        " colorscheme
+NeoBundle 'rking/ag.vim' 			                  " search
+NeoBundle 'bling/vim-airline' 			            " statusline
+NeoBundle 'tpope/vim-fugitive'			            " git
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'Shougo/unite.vim' 			" completion window
-NeoBundle 'scrooloose/syntastic' 		" syntax check on buffer save
-NeoBundle 'Lokaltog/TagHighlight' 		" tag highlighting
-NeoBundle 'matze/vim-move' 			" line-wise up/down shift selected blocks
+NeoBundle 'Shougo/unite.vim' 			              " completion window
+NeoBundle 'scrooloose/syntastic' 		            " syntax check on buffer save
+NeoBundle 'Lokaltog/TagHighlight' 		          " tag highlighting
+NeoBundle 'matze/vim-move' 			                " line-wise up/down shift selected blocks
 NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'chip/vim-fat-finger' 		" spelling corrections
-NeoBundle 'myusuf3/numbers.vim' 		" better line numbers
+NeoBundle 'chip/vim-fat-finger' 		            " spelling corrections
+NeoBundle 'myusuf3/numbers.vim' 		            " better line numbers
 NeoBundle 'terryma/vim-multiple-cursors'        " Sublime style multiple selections
-NeoBundle 'tpope/vim-dispatch' 			" build tasks FTW
+NeoBundle 'tpope/vim-dispatch' 			            " build tasks FTW
 NeoBundle 'Valloric/YouCompleteMe', {'build': {'unix': './install.sh --clang-completer --system-libclang', 'mac': './install.sh --clang-completer'}}
-NeoBundle 'SirVer/ultisnips' 			" Snippets
+NeoBundle 'SirVer/ultisnips' 			              " Snippets
 NeoBundle 'commentary.vim'
 NeoBundle 'surround.vim'
 
 " TODO: lazy load?
-NeoBundle 'Chiel92/vim-autoformat' 		" Autoformat code
+NeoBundle 'Chiel92/vim-autoformat' 		          " Autoformat code
 NeoBundle 'KurtPreston/vim-autoformat-rails' 	
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-rbenv'
 NeoBundle 'Haml'
 
 " TODO lazy load for osx only?
-NeoBundle 'troydm/pb.vim' 			" OSX pastebuffer interaction
-NeoBundle 'Dinduks/vim-holylight' 		" set dark/light background based on OSX light sensor
+NeoBundle 'troydm/pb.vim' 			                " OSX pastebuffer interaction
+" NeoBundle 'Dinduks/vim-holylight' 		          " set dark/light background based on OSX light sensor
 
 " html completion
 NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','css','eruby','less', 'sass','scss']}}
