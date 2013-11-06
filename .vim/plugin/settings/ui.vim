@@ -40,6 +40,7 @@ set linebreak  			            " Wrap lines longer than window
 set showbreak=↪\ \ 		          " string to put before wrapped screen lines
 set display+=lastline 		      " show last line even if it doesnt fit in the window
 set number 			                " show line numbers
+set updatetime=750
 
 " Define characters to show when you show formatting
 " stolen from https://github.com/tpope/vim-sensible
