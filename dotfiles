@@ -27,7 +27,6 @@ class DotfilesCLI < Thor
 
     # link dotfiles
     create_link "~/.agignore", File.join(__dir__, ".agignore")
-    create_link "~/.agrc", File.join(__dir__, ".agrc")
     create_link "~/.ctags", File.join(__dir__, ".ctags")
     create_link "~/.gemrc", File.join(__dir__, ".gemrc")
     create_link "~/.gitignore", File.join(__dir__, ".gitignore")
