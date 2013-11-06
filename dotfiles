@@ -30,6 +30,7 @@ class DotfilesCLI < Thor
     create_link "~/.ctags", File.join(__dir__, ".ctags")
     create_link "~/.gemrc", File.join(__dir__, ".gemrc")
     create_link "~/.gitignore", File.join(__dir__, ".gitignore")
+    create_link "~/.rbenv", File.join(__dir__, ".rbenv")
     create_link "~/.vim", File.join(__dir__, ".vim")
   end
 
