@@ -27,6 +27,7 @@ catch
 endtry
 
 autocmd BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+autocmd BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc execute ':AirlineRefresh'
 autocmd BufWritePost,FileWritePost * call vimproc#system_bg('ctags -R .')
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
