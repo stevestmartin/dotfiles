@@ -4,9 +4,33 @@ if [[ -s $HOME/.zprezto/init.zsh ]]; then
 fi
 
 brew-load() {
-  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.$1.plist
+  if [[ -f ~/Library/LaunchAgents/homebrew.mxcl.$1.plist ]] then
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.$1.plist
+  elif [[ -f /Library/LaunchDaemons/homebrew.mxcl.$1.plist ]]; then
+    launchctl load /Library/LaunchDaemons/homebrew.mxcl.$1.plist
+  else
+    echo "Could not locate LaunchAgent or LaunchDaemon '$1'"
+  fi
 }
 
 brew-unload() {
-  launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.$1.plist
+  if [[ -f ~/Library/LaunchAgents/homebrew.mxcl.$1.plist ]] then
+    launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.$1.plist
+  elif [[ -f /Library/LaunchDaemons/homebrew.mxcl.$1.plist ]]; then
+    launchctl unload /Library/LaunchDaemons/homebrew.mxcl.$1.plist
+  else
+    echo "Could not locate LaunchAgent or LaunchDaemon '$1'"
+  fi
+}
+
+brew-reload() {
+  if [[ -f ~/Library/LaunchAgents/homebrew.mxcl.$1.plist ]] then
+    launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.$1.plist
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.$1.plist
+  elif [[ -f /Library/LaunchDaemons/homebrew.mxcl.$1.plist ]]; then
+    launchctl unload /Library/LaunchDaemons/homebrew.mxcl.$1.plist
+    launchctl load /Library/LaunchDaemons/homebrew.mxcl.$1.plist
+  else
+    echo "Could not locate LaunchAgent or LaunchDaemon '$1'"
+  fi
 }

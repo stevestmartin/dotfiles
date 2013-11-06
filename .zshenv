@@ -78,3 +78,9 @@ fi
 # Rbenv
 #
 export RBENV_ROOT=/usr/local/var/rbenv
+
+#
+# Go Paths
+#
+export GOPATH=~/.go
+export PATH=$PATH:$GOPATH/bin
