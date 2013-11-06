@@ -25,15 +25,12 @@ class DotfilesCLI < Thor
     create_link "~/.zprezto", File.join(__dir__, "vendor/deps/prezto")
     Dir['.z*'].each {|p| create_link "~/#{p}", File.join(__dir__, p) }
 
-    # install vim
-    create_link "~/.vim", File.join(__dir__, ".vim")
+    # link dotfiles
     create_link "~/.agignore", File.join(__dir__, ".agignore")
-
-    # gemrc
+    create_link "~/.ctags", File.join(__dir__, ".ctags")
     create_link "~/.gemrc", File.join(__dir__, ".gemrc")
-
-    # git
     create_link "~/.gitignore", File.join(__dir__, ".gitignore")
+    create_link "~/.vim", File.join(__dir__, ".vim")
   end
 
   desc "uninstall", "Removes symlinks in home directory"
