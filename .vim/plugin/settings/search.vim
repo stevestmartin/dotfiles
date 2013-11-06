@@ -27,8 +27,5 @@ vnoremap <c-s> :s/\%V//g<left><left><left>
 " Ctrl-f: Find with MultipleCursors
 vnoremap <c-f> :MultipleCursorsFind 
 
-" Enter: Highlight cursor location
-nnoremap <silent> <cr> :call CursorPing()<CR>
-
 " Backspace: Toggle search highlight
 nnoremap <bs> :set hlsearch! hlsearch?<cr>

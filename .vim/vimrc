@@ -37,6 +37,7 @@ NeoBundle 'terryma/vim-smooth-scroll'
 NeoBundle 'ethanvandenberg22/unite-ultisnips'
 NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-rbenv'
+NeoBundle 'ervandew/supertab'
 
 " html completion
 NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','css','eruby','less', 'sass','scss']}}
