@@ -17,6 +17,7 @@ NeoBundle 'rking/ag.vim' 			                  " search
 NeoBundle 'bling/vim-airline' 			            " statusline
 NeoBundle 'tpope/vim-fugitive'			            " git
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'airblade/vim-rooter'
 NeoBundle 'Shougo/unite.vim' 			              " completion window
 NeoBundle 'scrooloose/syntastic' 		            " syntax check on buffer save
 NeoBundle 'Lokaltog/TagHighlight' 		          " tag highlighting
