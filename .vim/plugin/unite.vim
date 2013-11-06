@@ -53,9 +53,6 @@ nnoremap <silent> <space>f :<C-u>Unite -buffer-name=files file_rec/async file/ne
 " Quick grep from cwd
 nnoremap <silent> <space>g :<C-u>Unite -buffer-name=grep grep:.<CR>
 
-" Quick help
-nnoremap <silent> <space>h :<C-u>Unite -buffer-name=help help<CR>
-
 " Quick line using the word under cursor
 nnoremap <silent> <space>l :<C-u>UniteWithCursorWord -buffer-name=search_file line<CR>
 
@@ -67,6 +64,9 @@ nnoremap <silent> <space>n :<C-u>Unite -buffer-name=find find:.<CR>
 
 " Quick commands
 nnoremap <silent> <space>c :<C-u>Unite -buffer-name=commands command<CR>
+
+" Quick tags
+nnoremap <silent> <space>t :<C-u>Unite -buffer-name=tags tag<CR>
 
 " Quick bookmarks
 nnoremap <silent> <space>b :<C-u>Unite -buffer-name=bookmarks bookmark<CR>
