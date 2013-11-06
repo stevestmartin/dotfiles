@@ -33,8 +33,6 @@ NeoBundle 'commentary.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'Chiel92/vim-autoformat' 		          " Autoformat code
 
-" TODO lazy load for osx only?
-
 " html completion
 NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','css','eruby','less', 'sass','scss']}}
 NeoBundleLazy 'Haml', {'autoload':{'filetypes':['eruby', 'sass','scss']}}
