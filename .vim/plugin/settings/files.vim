@@ -6,7 +6,6 @@ set ffs=unix,mac,dos
 
 set directory=~/.vim/.cache/swap
 set noswapfile
-set tags=tags;/
 set showfulltag
 set modeline
 set modelines=5
@@ -26,8 +25,8 @@ try
 catch
 endtry
 
-autocmd MyAutoCmd BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc
-      \ so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+autocmd BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+autocmd BufWritePost,FileWritePost * call vimproc#system_bg('ctags -R .')
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcuts
