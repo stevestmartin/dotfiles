@@ -5,9 +5,6 @@ set gdefault " Assume the /g flag on :s substitutions to replace all matches in 
 set grepprg=ag\ --nogroup\ --column\ --smart-case\ --nocolor\ --follow 
 set grepformat=%f:%l:%c:%m
 
-let g:ackprg = 'ag --nogroup --colomn --smart-case --nocolor --follow'
-
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcuts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
