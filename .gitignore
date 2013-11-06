@@ -1,6 +1,7 @@
 # global ignores
 *.swo
 *.swp
+tags
 tmp/
 vendor/bundle/
 
