@@ -65,3 +65,9 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.so,*.swp,*.zip,*/.Trash/**,*.pdf,*.dmg,*/Library/**,*/.rbenv/**
 set wildignore+=*/.nx/**,*.app
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Shortcuts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>bl :set background=light<cr>
+map <leader>bd :set background=dark<cr>
