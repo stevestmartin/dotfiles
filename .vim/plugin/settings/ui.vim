@@ -17,7 +17,7 @@ set smartcase 			            " But case-sensitive if expression contains a capit
 set incsearch 			            " Highlight matches as you type
 set hlsearch 			              " Highlight matches
 set showmatch 			            " Briefly jump to matching brace
-set matchtime=2 		            " Speed things up
+set matchtime=2 		            " uiSpeed things up
 set lazyredraw 			            " Don't redraw while executing macros (good performance)
 set ttimeoutlen=1               " Keycode timeout
 set timeoutlen=750              " Mapping timeout
@@ -46,6 +46,9 @@ set virtualedit=onemore         " Give one virtual space at end of line
 set splitbelow                  " open horizontal splits below by default
 set splitright                  " open vertical splits to right by default
 set colorcolumn=+1              " Column width indicator
+set nosmartindent               " do not auto ident
+set cindent
+set pastetoggle=
 
 if has('conceal')
   set conceallevel=1
