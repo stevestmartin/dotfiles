@@ -39,7 +39,7 @@ set showbreak=↪\ \ 		          " string to put before wrapped screen lines
 set display+=lastline 		      " show last line even if it doesnt fit in the window
 set number 			                " show line numbers
 set viewoptions=folds,options,cursor,unix,slash     "unix/windows compatibility
-set updatetime=750
+set updatetime=2000
 set listchars=tab:│\ ,trail:•,extends:❯,precedes:❮
 set fcs=vert:│
 set virtualedit=onemore         " Give one virtual space at end of line

@@ -26,49 +26,49 @@ call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
       \ ], '\|'))
 
 " General fuzzy search
-nnoremap <silent> <space><space> :Unite -buffer-name=files buffer_tab bookmark file_rec/async<CR>
+nnoremap <silent> <space><space> :<C-u>Unite -buffer-name=files buffer_tab bookmark file_rec/async<CR>
 
 " Quick registers
-nnoremap <silent> <space>r :Unite -buffer-name=register register<CR>
+nnoremap <silent> <space>r :<C-u>Unite -buffer-name=register register<CR>
 
 " Quick buffer and mru
-nnoremap <silent> <space>u :Unite -buffer-name=buffers buffer file_mru<CR>
+nnoremap <silent> <space>u :<C-u>Unite -buffer-name=buffers buffer file_mru<CR>
 
 " Quick yank history
-nnoremap <silent> <space>y :Unite -buffer-name=yanks history/yank<CR>
+nnoremap <silent> <space>y :<C-u>Unite -buffer-name=yanks history/yank<CR>
 
 " Quick outline
-nnoremap <silent> <space>o :Unite -buffer-name=outline -vertical outline<CR>
+nnoremap <silent> <space>o :<C-u>Unite -buffer-name=outline -vertical outline<CR>
 
 " Quick sources
-nnoremap <silent> <space>a :Unite -buffer-name=sources source<CR>
+nnoremap <silent> <space>a :<C-u>Unite -buffer-name=sources source<CR>
 
 " Quick snippet
-nnoremap <silent> <space>s :Unite -buffer-name=snippets ultisnips<CR>
+nnoremap <silent> <space>s :<C-u>Unite -buffer-name=snippets ultisnips<CR>
 
 " Quick file search
-nnoremap <silent> <space>f :Unite -buffer-name=files file_rec/async file/new<CR>
+nnoremap <silent> <space>f :<C-u>Unite -buffer-name=files file_rec/async file/new<CR>
 
 " Quick grep from cwd
-nnoremap <silent> <space>g :Unite -buffer-name=grep git_grep<CR>
+nnoremap <silent> <space>g :<C-u>Unite -buffer-name=grep git_grep<CR>
 
 " Quick line using the word under cursor
-nnoremap <silent> <space>l :UniteWithCursorWord -buffer-name=search_file line<CR>
+nnoremap <silent> <space>l :<C-u>UniteWithCursorWord -buffer-name=search_file line<CR>
 
 " Quick MRU search
-nnoremap <silent> <space>m :Unite -buffer-name=mru file_mru<CR>
+nnoremap <silent> <space>m :<C-u>Unite -buffer-name=mru file_mru<CR>
 
 " Quick find
-nnoremap <silent> <space>n :Unite -buffer-name=find find:.<CR>
+nnoremap <silent> <space>n :<C-u>Unite -buffer-name=find find:.<CR>
 
 " Quick commands
-nnoremap <silent> <space>c :Unite -buffer-name=commands command<CR>
+nnoremap <silent> <space>c :<C-u>Unite -buffer-name=commands command<CR>
 
 " Quick tags
-nnoremap <silent> <space>t :Unite -buffer-name=tags tag<CR>
+nnoremap <silent> <space>t :<C-u>Unite -buffer-name=tags tag<CR>
 
 " Quick bookmarks
-nnoremap <silent> <space>b :Unite -buffer-name=bookmarks bookmark<CR>
+nnoremap <silent> <space>b :<C-u>Unite -buffer-name=bookmarks bookmark<CR>
 
 
 
