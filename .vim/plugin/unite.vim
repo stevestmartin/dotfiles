@@ -15,7 +15,6 @@ let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
 let g:unite_source_grep_recursive_opt = ''
 
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 call unite#set_profile('files', 'smartcase', 1)
 call unite#custom#source('line,outline','matchers','matcher_fuzzy')
@@ -27,7 +26,7 @@ call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
       \ ], '\|'))
 
 " General fuzzy search
-nnoremap <silent> <space><space> :Unite -buffer-name=files buffer file_mru bookmark file_rec/async<CR>
+nnoremap <silent> <space><space> :Unite -buffer-name=files buffer_tab bookmark file_rec/async<CR>
 
 " Quick registers
 nnoremap <silent> <space>r :Unite -buffer-name=register register<CR>
