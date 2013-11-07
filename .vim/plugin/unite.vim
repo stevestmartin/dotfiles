@@ -70,49 +70,18 @@ nnoremap <silent> <space>t :<C-u>Unite -buffer-name=tags tag<CR>
 " Quick bookmarks
 nnoremap <silent> <space>b :<C-u>Unite -buffer-name=bookmarks bookmark<CR>
 
-
-
 " Overwrite settings.
-" Custom Unite settings
-autocmd MyAutoCmd FileType unite call s:unite_settings()
-function! s:unite_settings()
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings()
+  " ctrl+s to open in split
+  imap <silent><buffer><expr> <C-s><t_ü>  unite#do_action('split')
 
-  nmap <buffer> <ESC> <Plug>(unite_exit)
-  imap <buffer> <ESC> <Plug>(unite_exit)
-  " imap <buffer> <c-j> <Plug>(unite_select_next_line)
-  imap <buffer> <c-j> <Plug>(unite_insert_leave)
-  nmap <buffer> <c-j> <Plug>(unite_loop_cursor_down)
-  nmap <buffer> <c-k> <Plug>(unite_loop_cursor_up)
-  imap <buffer> <c-a> <Plug>(unite_choose_action)
-  imap <buffer> <Tab> <Plug>(unite_exit_insert)
-  imap <buffer> jj <Plug>(unite_insert_leave)
-  imap <buffer> <C-w> <Plug>(unite_delete_backward_word)
-  imap <buffer> <C-u> <Plug>(unite_delete_backward_path)
-  imap <buffer> '     <Plug>(unite_quick_match_default_action)
-  nmap <buffer> '     <Plug>(unite_quick_match_default_action)
-  nmap <buffer> <C-r> <Plug>(unite_redraw)
-  imap <buffer> <C-r> <Plug>(unite_redraw)
-  inoremap <silent><buffer><expr> <C-s> unite#do_action('split')
-  nnoremap <silent><buffer><expr> <C-s> unite#do_action('split')
-  inoremap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
-  nnoremap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
-
-  let unite = unite#get_current_unite()
-  if unite.buffer_name =~# '^search'
-    nnoremap <silent><buffer><expr> r     unite#do_action('replace')
-  else
-    nnoremap <silent><buffer><expr> r     unite#do_action('rename')
-  endif
-
-  nnoremap <silent><buffer><expr> cd     unite#do_action('lcd')
-
-  " Using Ctrl-\ to trigger outline, so close it using the same keystroke
-  if unite.buffer_name =~# '^outline'
-    imap <buffer> <C-\> <Plug>(unite_exit)
-  endif
-
-  " Using Ctrl-/ to trigger line, close it using same keystroke
-  if unite.buffer_name =~# '^search_file'
-    imap <buffer> <C-_> <Plug>(unite_exit)
-  endif
+  " hit o to open
+  nnoremap <silent><buffer><expr> o   unite#do_action('open')
+  
+  " hit p to show preview window
+  noremap <silent><buffer><expr> p
+    \ empty(filter(range(1, winnr('$')),
+    \ 'getwinvar(v:val, "&previewwindow") != 0')) ?
+    \ unite#do_action('preview') : ":\<C-u>pclose!\<CR>"
 endfunction
