@@ -1,4 +1,5 @@
 # global ignores
+.envrc
 *.swo
 *.swp
 tags

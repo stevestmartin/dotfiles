@@ -80,7 +80,12 @@ fi
 export RBENV_ROOT=/usr/local/var/rbenv
 
 #
-# Go Paths
+# Direnv http://direnv.net/
+#
+eval "$(direnv hook zsh)"
+
+#
+# Go
 #
 export GOPATH=~/.go
 export PATH=$PATH:$GOPATH/bin
