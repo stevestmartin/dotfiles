@@ -25,7 +25,6 @@ NeoBundle 'scrooloose/syntastic' 		            " syntax check on buffer save
 NeoBundle 'Lokaltog/TagHighlight' 		          " tag highlighting
 NeoBundle 'matze/vim-move' 			                " line-wise up/down shift selected blocks
 NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'chip/vim-fat-finger' 		            " spelling corrections
 NeoBundle 'myusuf3/numbers.vim' 		            " better line numbers
 NeoBundle 'terryma/vim-multiple-cursors'        " Sublime style multiple selections
 NeoBundle 'tpope/vim-dispatch' 			            " build tasks FTW
