@@ -31,8 +31,8 @@ class DotfilesCLI < Thor
     create_link "~/.gemrc", File.join(__dir__, ".gemrc")
     create_link "~/.gitignore", File.join(__dir__, ".gitignore")
     create_link "~/.rbenv/default-gems", File.join(__dir__, ".rbenv/default-gems")
+    create_link "~/.tmux.conf", File.join(__dir__, ".tmux.conf")
     create_link "~/.vim", File.join(__dir__, ".vim")
-    create_link "~/conf", File.join(__dir__, "conf")
   end
 
   desc "uninstall", "Removes symlinks in home directory"
