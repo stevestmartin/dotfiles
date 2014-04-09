@@ -30,7 +30,7 @@ NeoBundle 'terryma/vim-multiple-cursors'        " Sublime style multiple selecti
 NeoBundle 'tpope/vim-dispatch' 			            " build tasks FTW
 NeoBundle 'tpope/vim-scriptease'
 NeoBundle 'Valloric/YouCompleteMe', {'build': {'unix': './install.sh --clang-completer --system-libclang', 'mac': './install.sh --clang-completer'}}
-NeoBundle 'SirVer/ultisnips' 			              " Snippets
+" NeoBundle 'SirVer/ultisnips' 			              " Snippets
 NeoBundle 'commentary.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'Chiel92/vim-autoformat' 		          " Autoformat code
