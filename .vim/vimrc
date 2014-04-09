@@ -22,7 +22,6 @@ NeoBundle 'airblade/vim-rooter'
 NeoBundle 'kana/vim-submode'
 NeoBundle 'Shougo/unite.vim' 			              " completion window
 NeoBundle 'scrooloose/syntastic' 		            " syntax check on buffer save
-NeoBundle 'Lokaltog/TagHighlight' 		          " tag highlighting
 NeoBundle 'matze/vim-move' 			                " line-wise up/down shift selected blocks
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'myusuf3/numbers.vim' 		            " better line numbers
@@ -30,12 +29,10 @@ NeoBundle 'terryma/vim-multiple-cursors'        " Sublime style multiple selecti
 NeoBundle 'tpope/vim-dispatch' 			            " build tasks FTW
 NeoBundle 'tpope/vim-scriptease'
 NeoBundle 'Valloric/YouCompleteMe', {'build': {'unix': './install.sh --clang-completer --system-libclang', 'mac': './install.sh --clang-completer'}}
-" NeoBundle 'SirVer/ultisnips' 			              " Snippets
 NeoBundle 'commentary.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'Chiel92/vim-autoformat' 		          " Autoformat code
 NeoBundle 'terryma/vim-smooth-scroll'
-NeoBundle 'ethanvandenberg22/unite-ultisnips'
 NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-rbenv'
 NeoBundle 'marijnh/tern_for_vim', { 'build': { 'mac': 'npm install', 'unix': 'npm install' } }
