@@ -21,17 +21,13 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'airblade/vim-rooter'
 NeoBundle 'kana/vim-submode'
 NeoBundle 'Shougo/unite.vim' 			              " completion window
-NeoBundle 'scrooloose/syntastic' 		            " syntax check on buffer save
 NeoBundle 'matze/vim-move' 			                " line-wise up/down shift selected blocks
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'myusuf3/numbers.vim' 		            " better line numbers
 NeoBundle 'terryma/vim-multiple-cursors'        " Sublime style multiple selections
-NeoBundle 'tpope/vim-dispatch' 			            " build tasks FTW
-NeoBundle 'tpope/vim-scriptease'
 NeoBundle 'Valloric/YouCompleteMe', {'build': {'unix': './install.sh --clang-completer --system-libclang', 'mac': './install.sh --clang-completer'}}
 NeoBundle 'commentary.vim'
 NeoBundle 'surround.vim'
-NeoBundle 'sudo.vim'
 NeoBundle 'Chiel92/vim-autoformat' 		          " Autoformat code
 NeoBundle 'terryma/vim-smooth-scroll'
 NeoBundle 'tpope/vim-bundler'
