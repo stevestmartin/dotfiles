@@ -34,3 +34,11 @@ brew-reload() {
     echo "Could not locate LaunchAgent or LaunchDaemon '$1'"
   fi
 }
+
+goproj() {
+  if [[ -d $GOPATH/src/github.com/$(whoami)/$1 ]] then
+    cd $GOPATH/src/github.com/$(whoami)/$1
+  else
+    echo "Could not locate Project '$1' in GOPATH=$GOPATH"
+  fi
+}
