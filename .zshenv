@@ -82,5 +82,5 @@ export RBENV_ROOT=/usr/local/var/rbenv
 #
 # Go
 #
-export GOPATH=~/.go
-export PATH=$PATH:$GOPATH/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin
