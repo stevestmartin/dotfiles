@@ -31,7 +31,7 @@ if [ ! -f /usr/local/bin/mvim ]; then
 fi
 
 # Setup dotfiles
-files=(.agignore .bash_profile .ctags .gemrc .gitconfig .gitignore .rbenv)
+files=(.agignore .bash_profile .ctags .gemrc .gitconfig .gitignore .rbenv .vim)
 for file in "${files[@]}"; do
   if [ ! -L ~/$file ]; then
     echo "Linking ~/'$file'"
