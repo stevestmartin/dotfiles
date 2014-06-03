@@ -15,7 +15,7 @@ if [ ! -d /usr/local/Library ]; then
 fi
 
 # Install Dependencies
-packages=(ctags git git-extras python rbenv rbenv-binstubs rbenv-gem-rehash ruby-build)
+packages=(bash-completion ctags git git-extras python rbenv rbenv-binstubs rbenv-gem-rehash ruby-build)
 for pkg in "${packages[@]}"; do
   if ! brew list -1 | grep -q "^${pkg}\$"; then
     echo "Installing Package '$pkg'"
@@ -31,14 +31,12 @@ if [ ! -f /usr/local/bin/mvim ]; then
 fi
 
 # Setup dotfiles
-files=(.bash_profile .gemrc .gitconfig .gitignore)
+files=(.agignore .bash_profile .ctags .gemrc .gitconfig .gitignore .rbenv)
 for file in "${files[@]}"; do
   if [ ! -L ~/$file ]; then
     echo "Linking ~/'$file'"
-    ln -fs ./$file ~/$file
+    ln -fs $(pwd)/$file ~/$file
   fi
 done
 
 source ~/.bash_profile
-
-
