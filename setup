@@ -1,0 +1,44 @@
+#!/bin/bash
+# vim: set filetype=bash
+
+# Setup SSH Environment
+if [ ! -L ~/.ssh ]; then
+  echo 'Setup SSH environment'
+  ln -fs ~/Dropbox/.ssh ~/.ssh
+  chmod 700 ~/.ssh/id_rsa
+fi
+
+# Setup Homebrew
+if [ ! -d /usr/local/Library ]; then
+  echo 'Installing Homebrew'
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+fi
+
+# Install Dependencies
+packages=(ctags git git-extras python rbenv rbenv-binstubs rbenv-gem-rehash ruby-build)
+for pkg in "${packages[@]}"; do
+  if ! brew list -1 | grep -q "^${pkg}\$"; then
+    echo "Installing Package '$pkg'"
+    brew install $pkg
+  fi
+done
+
+# Install MacVim
+if [ ! -f /usr/local/bin/mvim ]; then
+  echo "Installing Package 'macvim --with-python --override-system-vim'"
+  brew install macvim --with-python --override-system-vim
+  brew linkapps
+fi
+
+# Setup dotfiles
+files=(.bash_profile .gemrc .gitconfig .gitignore)
+for file in "${files[@]}"; do
+  if [ ! -L ~/$file ]; then
+    echo "Linking ~/'$file'"
+    ln -fs ~/Dropbox/Config/$file ~/$file
+  fi
+done
+
+source ~/.bash_profile
+
+
