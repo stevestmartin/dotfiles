@@ -28,10 +28,13 @@ if [ ! -f /usr/local/bin/mvim ]; then
   echo "Installing Package 'macvim --with-python --override-system-vim'"
   brew install macvim --with-python --override-system-vim
   brew linkapps
+
+  ln -fs $(pwd)/.vim /.vim
+  git submodule init && git submodule update
 fi
 
 # Setup dotfiles
-files=(.agignore .bash_profile .ctags .gemrc .gitconfig .gitignore .rbenv .vim)
+files=(.agignore .bash_profile .ctags .gemrc .gitconfig .gitignore .rbenv)
 for file in "${files[@]}"; do
   if [ ! -L ~/$file ]; then
     echo "Linking ~/'$file'"
