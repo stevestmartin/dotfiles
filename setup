@@ -35,7 +35,7 @@ files=(.bash_profile .gemrc .gitconfig .gitignore)
 for file in "${files[@]}"; do
   if [ ! -L ~/$file ]; then
     echo "Linking ~/'$file'"
-    ln -fs ~/Dropbox/Config/$file ~/$file
+    ln -fs ./$file ~/$file
   fi
 done
 
