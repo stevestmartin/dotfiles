@@ -7,6 +7,9 @@ tmp/
 vendor/bundle/
 
 # dotfiles repo ignore
+.rbenv/bundles
+.rbenv/shims
+.rbenv/versions
 .vim/bundle/
 .vim/.cache/
 .vim/.netrwhist

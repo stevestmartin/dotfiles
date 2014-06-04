@@ -17,9 +17,6 @@ NeoBundle 'chriskempson/base16-vim' 		        " colorscheme
 NeoBundle 'rking/ag.vim' 			                  " search
 NeoBundle 'bling/vim-airline' 			            " statusline
 NeoBundle 'tpope/vim-fugitive'			            " git
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'airblade/vim-rooter'
-NeoBundle 'kana/vim-submode'
 NeoBundle 'Shougo/unite.vim' 			              " completion window
 NeoBundle 'matze/vim-move' 			                " line-wise up/down shift selected blocks
 NeoBundle 'Yggdroot/indentLine'
@@ -28,11 +25,9 @@ NeoBundle 'terryma/vim-multiple-cursors'        " Sublime style multiple selecti
 NeoBundle 'Valloric/YouCompleteMe', {'build': {'unix': './install.sh --clang-completer --system-libclang', 'mac': './install.sh --clang-completer'}}
 NeoBundle 'commentary.vim'
 NeoBundle 'surround.vim'
-NeoBundle 'Chiel92/vim-autoformat' 		          " Autoformat code
 NeoBundle 'terryma/vim-smooth-scroll'
 NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-rbenv'
-NeoBundle 'marijnh/tern_for_vim', { 'build': { 'mac': 'npm install', 'unix': 'npm install' } }
 
 " html completion
 NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','css','eruby','less', 'sass','scss']}}
@@ -53,10 +48,6 @@ NeoBundleLazy 'maksimr/vim-jsbeautify', {'autoload':{'filetypes':['javascript']}
 
 " OSX pastebuffer interaction
 NeoBundleLazy 'troydm/pb.vim', {'autoload':{'functions':["has('mac')"]}} 			                
-
-" set dark/light background based on OSX light sensor
-" NeoBundleLazy 'Dinduks/vim-holylight', {'autoload':{'functions':["has('mac')"]}} 		          
- 	
 NeoBundleCheck
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
