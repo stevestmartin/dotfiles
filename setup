@@ -15,7 +15,7 @@ if [ ! -d /usr/local/Library ]; then
 fi
 
 # Install Dependencies
-packages=(bash-completion cmake ctags git git-extras python rbenv rbenv-binstubs rbenv-gem-rehash ruby-build)
+packages=(bash-completion cmake curl ctags dnsmasq git git-extras libsass node python rbenv rbenv-binstubs rbenv-gem-rehash ruby-build the_silver_searcher wget)
 for pkg in "${packages[@]}"; do
   if ! brew list -1 | grep -q "^${pkg}\$"; then
     echo "Installing Package '$pkg'"
@@ -31,7 +31,22 @@ if [ ! -f /usr/local/bin/mvim ]; then
 
   ln -fs $(pwd)/.vim /.vim
   git submodule init && git submodule update 
-  (cd $(pwd)/.vim/bundle/YouCompleteMe && git submodule update && ./install.sh)
+  brew unlink python
+  (cd $(pwd)/.vim/bundle/YouCompleteMe && git submodule update && ./install.sh --clang-completer)
+fi
+
+# Setup dnsmasq
+if [ ! -L /usr/local/etc/dnsmasq.conf ]; then
+  echo "Linking /usr/local/etc/dnsmasq.conf'"
+  ln -fs $(pwd)/etc/dnsmasq.conf /usr/local/etc/dnsmasq.conf
+
+  # launch on start
+  sudo cp $(brew list dnsmasq | grep /homebrew.mxcl.dnsmasq.plist$) /Library/LaunchDaemons/
+  brew services start dnsmasq
+
+  # add resolver for .dev TLD
+  sudo mkdir -p /etc/resolver
+  sudo ln -fs $(pwd)/etc/resolver/dev /etc/resolver/dev
 fi
 
 # Setup dotfiles
