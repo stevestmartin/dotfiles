@@ -15,7 +15,7 @@ if [ ! -d /usr/local/Library ]; then
 fi
 
 # Install Dependencies
-packages=(bash-completion ctags git git-extras python rbenv rbenv-binstubs rbenv-gem-rehash ruby-build)
+packages=(bash-completion cmake ctags git git-extras python rbenv rbenv-binstubs rbenv-gem-rehash ruby-build)
 for pkg in "${packages[@]}"; do
   if ! brew list -1 | grep -q "^${pkg}\$"; then
     echo "Installing Package '$pkg'"
@@ -30,7 +30,8 @@ if [ ! -f /usr/local/bin/mvim ]; then
   brew linkapps
 
   ln -fs $(pwd)/.vim /.vim
-  git submodule init && git submodule update
+  git submodule init && git submodule update 
+  (cd $(pwd)/.vim/bundle/YouCompleteMe && git submodule update && ./install.sh)
 fi
 
 # Setup dotfiles
