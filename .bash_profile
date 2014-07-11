@@ -27,3 +27,6 @@ eval "$(rbenv init -)"
 if [ -f ~/.rbenv/completions/rbenv.bash ]; then
   source ~/.rbenv/completions/rbenv.bash
 fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

@@ -29,6 +29,8 @@ NeoBundle 'terryma/vim-smooth-scroll'
 NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-rbenv'
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'chase/vim-ansible-yaml'
 
 " html completion
 NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','css','eruby','less', 'sass','scss']}}
