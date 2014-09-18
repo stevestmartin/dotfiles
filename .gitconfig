@@ -10,7 +10,7 @@
 	status = auto
 	ui = 1
 [core]
-	editor = vim
+	editor = /usr/local/bin/vim
 	excludesfile = ~/.gitignore
 [filter "media"]
 	clean = git-media-clean %f

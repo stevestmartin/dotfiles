@@ -30,3 +30,6 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### add ./bin to PATH
+export PATH=./bin:$PATH
