@@ -21,13 +21,9 @@ NeoBundle 'Shougo/unite.vim' 			              " completion window
 NeoBundle 'matze/vim-move' 			                " line-wise up/down shift selected blocks
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'myusuf3/numbers.vim' 		            " better line numbers
-NeoBundle 'terryma/vim-multiple-cursors'        " Sublime style multiple selections
 NeoBundle 'Valloric/YouCompleteMe', {'build': {'unix': './install.sh --clang-completer --system-libclang', 'mac': './install.sh --clang-completer'}}
 NeoBundle 'commentary.vim'
 NeoBundle 'surround.vim'
-NeoBundle 'terryma/vim-smooth-scroll'
-NeoBundle 'tpope/vim-bundler'
-NeoBundle 'tpope/vim-rbenv'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'chase/vim-ansible-yaml'
@@ -39,15 +35,10 @@ NeoBundleLazy 'cakebaker/scss-syntax.vim', {'autoload':{'filetypes':['scss','sas
 NeoBundleLazy 'hail2u/vim-css3-syntax', {'autoload':{'filetypes':['css','scss','sass']}}
 NeoBundleLazy 'ap/vim-css-color', {'autoload':{'filetypes':['css','scss','sass','less','styl']}}
 NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffee']}}
-NeoBundleLazy 'leshill/vim-json', {'autoload':{'filetypes':['javascript','json']}}
-NeoBundleLazy 'fatih/vim-go', {'autoload':{'filetypes':['go']}}
 NeoBundleLazy 'Shougo/unite-outline', {'autoload':{'unite_sources':'outline'}}
 NeoBundleLazy 'tsukkee/unite-tag', {'autoload':{'unite_sources':['tag','tag/file']}}
 NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}}
 NeoBundleLazy 'tpope/vim-markdown', {'autoload':{'filetypes':['markdown']}}
-NeoBundleLazy 'KurtPreston/vim-autoformat-rails', {'autoload':{'filetypes':['eruby', 'ruby']}}
-NeoBundleLazy 'pangloss/vim-javascript', {'autoload':{'filetypes':['javascript']}}
-NeoBundleLazy 'maksimr/vim-jsbeautify', {'autoload':{'filetypes':['javascript']}}
 
 " OSX pastebuffer interaction
 NeoBundleLazy 'troydm/pb.vim', {'autoload':{'functions':["has('mac')"]}} 			                
