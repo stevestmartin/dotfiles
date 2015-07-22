@@ -33,3 +33,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ### add ./bin to PATH
 export PATH=./bin:$PATH
+
+### Android
+export ANDROID_NDK_HOME=$HOME/android-ndk-r10d
+export ANDROID_HOME=$HOME/android-sdk-macosx
