@@ -1,3 +1,4 @@
+let g:ycm_collect_identifiers_from_tags_files = 0
 let g:ycm_min_num_of_chars_for_completion = 2
 let g:ycm_min_num_identifier_candidate_chars = 3
 let g:ycm_allow_changing_updatetime = 1
