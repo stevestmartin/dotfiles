@@ -7,9 +7,9 @@ let g:unite_split_rule = 'botright'
 let g:unite_update_time = 200
 let g:unite_cursor_line_highlight = 'TabLineSel'
 let g:unite_source_file_mru_filename_format = ':~:.'
-let g:unite_source_file_mru_limit = 1000
+let g:unite_source_file_mru_limit = 10000
 let g:unite_source_file_mru_time_format = ''
-let g:unite_source_rec_max_cache_files = 2000
+let g:unite_source_rec_max_cache_files = 20000
 
 let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'

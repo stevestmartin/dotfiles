@@ -1,9 +1,7 @@
-set nocompatible
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme base16-default
+colorscheme base16-default-dark
 set background=dark
 
 set cmdheight=1 		            " Height of command bar
@@ -42,7 +40,7 @@ set display+=lastline 		      " show last line even if it doesnt fit in the wind
 set number 			                " show line numbers
 set viewoptions=folds,options,cursor,unix,slash     "unix/windows compatibility
 set updatetime=2000
-set listchars=tab:│\ ,trail:•,extends:❯,precedes:❮
+"set listchars=tab:│\ ,trail:•,extends:❯,precedes:❮
 set fcs=vert:│
 set virtualedit=onemore         " Give one virtual space at end of line
 set splitbelow                  " open horizontal splits below by default
